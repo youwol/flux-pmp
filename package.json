@@ -1,12 +1,12 @@
 {
-    "name": "flux-pmp",
+    "name": "@youwol/flux-pmp",
     "version": "0.0.0-next",
     "description": "",
     "author": "",
     "keywords": [
         "flux"
     ],
-    "main": "dist/flux-pmp.js",
+    "main": "dist/@youwol/flux-pmp.js",
     "types": "src/index.ts",
     "scripts": {
         "autogen": "node scripts/auto-gen.js",
