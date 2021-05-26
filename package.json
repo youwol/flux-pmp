@@ -17,11 +17,13 @@
         "test": "jest -c ./jest.config.js --rootDir . -i",
         "test-coverage": "jest -c ./jest.config.js --rootDir . -i --collect-coverage --collectCoverageFrom=./src/lib/**/*.ts "
     },
-    "dependencies": {},
     "peerDependencies": {
         "@youwol/cdn-client": "0.x",
         "@youwol/flux-core": "0.x",
         "@youwol/flux-view": "0.x",
+        "@youwol/flux-three": "0.x",
+        "three": "0.128.0",
+        "three-trackballcontrols": "0.0.8",
         "lodash": "4.x",
         "reflect-metadata": "0.x",
         "rxjs": "6.x"
@@ -30,6 +32,10 @@
         "@youwol/cdn-client": "0.x",
         "@youwol/flux-view": "0.x",
         "@youwol/flux-core": "0.x",
+        "@youwol/flux-three": "0.x",
+        "@types/three": "^0.128.0",
+        "three": "0.128.0",
+        "three-trackballcontrols": "0.0.8",
         "reflect-metadata": "0.1.13",
         "@types/jest": "26.0.22",
         "@types/node": "14.14.37",
@@ -55,7 +61,8 @@
         },
         "cdnDependencies": {
             "@youwol/flux-core": "0.x",
-            "@youwol/flux-view": "0.x"
+            "@youwol/flux-view": "0.x",
+            "@youwol/flux-three": "0.x"
         }
     }
 }

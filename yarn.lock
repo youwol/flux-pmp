@@ -651,6 +651,11 @@
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-2.0.0.tgz#7036640b4e21cc2f259ae826ce843d277dad8cff"
   integrity sha512-RJJrrySY7A8havqpGObOB4W92QXKJo63/jFLLgpvOtsGUqbQZ9Sbgl35KMm1DjC6j7AvmmU2bIno+3IyEaemaw==
 
+"@types/three@^0.128.0":
+  version "0.128.0"
+  resolved "https://registry.yarnpkg.com/@types/three/-/three-0.128.0.tgz#e5ce4c42d138a64dd90e83dbdb9919cf0d424d8e"
+  integrity sha512-Jwq5XYUkzAcPTo34hlGAQGUyAI0b2F3aCCFWG/v7ZhJBEG5HGcusMSr70GhDlT8Gs0f02QnSPZ2RCA1MrCOa/w==
+
 "@types/yargs-parser@*":
   version "20.2.0"
   resolved "https://registry.yarnpkg.com/@types/yargs-parser/-/yargs-parser-20.2.0.tgz#dd3e6699ba3237f0348cd085e4698780204842f9"
@@ -820,6 +825,11 @@
   version "0.0.11"
   resolved "https://registry.yarnpkg.com/@youwol/flux-core/-/flux-core-0.0.11.tgz#473c0b52f0c90e900cf51993d70cc7522dd924c7"
   integrity sha512-QqbzGA8XgVppth9jEYeM3ue31Z1x/Mxm64UYmCbxCE+sk7jWSssq9hm53cstidID/fbs7F6I4ccdZDQXIDxF5A==
+
+"@youwol/flux-three@0.x":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@youwol/flux-three/-/flux-three-0.0.2.tgz#396217bf17db7784f59e3234dc47375854ba4f86"
+  integrity sha512-C8JTZOtmZ18Ut0AvThQjWaiHm67oVOrWpwQ3rLlYiPdMUiNZzBc2tDG46ILljQ1YwgBpbOlTGaZqPjIbR8jALQ==
 
 "@youwol/flux-view@0.x":
   version "0.0.8"
@@ -4087,6 +4097,16 @@ text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
+
+three-trackballcontrols@0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/three-trackballcontrols/-/three-trackballcontrols-0.0.8.tgz#4af85312d211387e451023f9bef576094993a118"
+  integrity sha512-9my4rB/ILaJw8E6khOcC6d8F8kEe6BvRtCer9bFJGZOh9txy4BqzwPrG7d8YCKK9MfcyTUoLsB5LKIsbtsZRTg==
+
+three@0.128.0:
+  version "0.128.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.128.0.tgz#884dacca6a330e45600a09ec5439283f50b76aa6"
+  integrity sha512-i0ap/E+OaSfzw7bD1TtYnPo3VEplkl70WX5fZqZnfZsE3k3aSFudqrrC9ldFZfYFkn1zwDmBcdGfiIm/hnbyZA==
 
 throat@^5.0.0:
   version "5.0.0"
