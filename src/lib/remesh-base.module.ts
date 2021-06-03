@@ -244,13 +244,19 @@ export class RemeshBase<TConfig extends RemeshConfiguration> extends ModuleFlux 
 
     createOutputObject(meshes: PmpMesh[], configuration: TConfig){
         let group = new Group() 
-        meshes.forEach( (skin) => {
-            group.add(skin)
+        meshes.forEach( (object, i) => {
+            createFluxThreeObject3D({
+                object,
+                id:`${configuration.objectId}_${i}`,
+                displayName:configuration.objectId
+            })
+            group.add(object)
         })
         let obj = createFluxThreeObject3D({
             object:group,
             id:configuration.objectId,
-            displayName:configuration.objectId
+            displayName:configuration.objectId,
+            transform: configuration.transform
         })
         return obj
     }
