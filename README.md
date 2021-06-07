@@ -32,7 +32,7 @@ yarn doc
 ```
 ## Documentation
 
-You can find the documentation [here](https://youwol.github.io/$flux-pmp/dist/docs/index.html).
+You can find the documentation [here](https://youwol.github.io/flux-pmp/dist/docs/index.html).
 
 
 ## Contributions
