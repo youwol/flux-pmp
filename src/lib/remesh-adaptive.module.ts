@@ -1,9 +1,11 @@
 import { pack } from './main';
 import { Property, Flux, BuilderView, Pipe, Schema, Context} from '@youwol/flux-core'
 import *  as _ from 'lodash'
-import { RemeshBase, RemeshConfiguration, svgRemeshIcon } from './remesh-base.module';
-import { IPmpMeshImplementation, PmpMesh } from './types.pmp';
+import { RemeshBase, svgRemeshIcon, WorkerArguments } from './remesh-base.module';
+import { IPmpMeshImplementation } from './types.pmp';
 
+import * as FluxThree from '@youwol/flux-three'
+import { WorkerContext } from '@youwol/flux-core/src/lib/worker-pool';
 /**
  * ## Description 
  * 
@@ -30,7 +32,7 @@ export namespace ModuleAdaptiveRemesh {
     @Schema({
         pack: pack
     })
-    export class PersistentData extends RemeshConfiguration{
+    export class PersistentData extends FluxThree.Schemas.Object3DConfiguration{
 
         /**
          * Factor that defines re-meshing smaller edge length w/ mean original object's edge length
@@ -101,25 +103,25 @@ export namespace ModuleAdaptiveRemesh {
     export class Module extends RemeshBase<PersistentData> {
 
         constructor(params) {
-            super(params, remeshSurface)
+            super(params, "Remesh-adaptive", remeshSurface)
         }
 
     }
 
-    function remeshSurface(
-        positions: Float32Array, 
-        indexes: Uint16Array,
-        config: PersistentData, 
-        pmpModule: any
-        ): IPmpMeshImplementation { 
-        
-        let typedPositions = Array.from(positions)
-        let typedIndexes = Array.from(indexes)
-
+    function remeshSurface({ args, taskId, context, workerScope }:{
+        args: WorkerArguments<PersistentData>, 
+        taskId: string,
+        workerScope: any,
+        context: WorkerContext
+    }) {
+        let pmpModule = workerScope["PmpModule"]
+        let typedPositions = Array.from(args.positions)
+        let typedIndexes = Array.from(args.indexes)
         let surface = pmpModule.buildSurface(typedPositions, typedIndexes)
         let mean = surface.meanEdgeLength()
-
-        surface.adaptiveRemesh( mean * config.minEdgeFactor, mean * config.maxEdgeFactor, config.approxError, config.iterationsCount,config.useProjection )
-        return surface
+        surface.adaptiveRemesh( mean * args.config.minEdgeFactor, mean * args.config.maxEdgeFactor, args.config.approxError,
+            args.config.iterationsCount, args.config.useProjection )
+        
+        return { positions: surface.position(), indexes: surface.index()}
     }
 }

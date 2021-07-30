@@ -1,8 +1,11 @@
 import { pack } from './main';
 import { Property, Flux, BuilderView, Pipe, Schema, Context} from '@youwol/flux-core'
 import *  as _ from 'lodash'
-import { RemeshBase, RemeshConfiguration, svgRemeshIcon } from './remesh-base.module';
-import { IPmpMeshImplementation, PmpMesh } from './types.pmp';
+import { RemeshBase, svgRemeshIcon, WorkerArguments } from './remesh-base.module';
+import { IPmpMeshImplementation } from './types.pmp';
+
+import * as FluxThree from '@youwol/flux-three'
+import { WorkerContext } from '@youwol/flux-core/src/lib/worker-pool';
 
 /**
  * ## Description 
@@ -25,7 +28,7 @@ export namespace ModuleRemeshExplicitSmoothing {
         pack: pack,
         description: "Persistent Data of RemeshExplicitSmoothing"
     })
-    export class PersistentData extends RemeshConfiguration {
+    export class PersistentData extends FluxThree.Schemas.Object3DConfiguration {
 
         /**
          * Number of iteration
@@ -77,23 +80,23 @@ export namespace ModuleRemeshExplicitSmoothing {
     export class Module extends RemeshBase<PersistentData> {
 
         constructor(params) {
-            super(params, remeshSurface)
+            super(params, "Remesh-soothing explicit", remeshSurface)
         }
 
     }
 
-    function remeshSurface(
-        positions: Float32Array, 
-        indexes: Uint16Array,
-        config: PersistentData, 
-        pmpModule: any
-        ): IPmpMeshImplementation {
-
-        let typedPositions = Array.from(positions)
-        let typedIndexes = Array.from(indexes)
-
+    function remeshSurface({ args, taskId, context, workerScope }:{
+        args: WorkerArguments<PersistentData>, 
+        taskId: string,
+        workerScope: any,
+        context: WorkerContext
+    }) {
+        let pmpModule = workerScope["PmpModule"]
+        let typedPositions = Array.from(args.positions)
+        let typedIndexes = Array.from(args.indexes)
         let surface = pmpModule.buildSurface(typedPositions, typedIndexes)
-        surface.explicitSmoothing( config.iterationCount, config.useUniformLaplace)
-        return surface
+        surface.explicitSmoothing( args.config.iterationCount, args.config.useUniformLaplace)
+        return { positions: surface.position(), indexes: surface.index()}
     }
+
 }

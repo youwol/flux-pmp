@@ -1,10 +1,11 @@
 
 import { pack } from './main';
-import { Property, Flux, BuilderView, Pipe, Schema, Context} from '@youwol/flux-core'
+import { Property, Flux, BuilderView, Schema} from '@youwol/flux-core'
 import *  as _ from 'lodash'
-import { RemeshBase, RemeshConfiguration, svgRemeshIcon } from './remesh-base.module';
-import { IPmpMeshImplementation, PmpMesh } from './types.pmp';
+import { RemeshBase, svgRemeshIcon, WorkerArguments } from './remesh-base.module';
+import { WorkerContext } from '@youwol/flux-core/src/lib/worker-pool';
 
+import * as FluxThree from '@youwol/flux-three'
 /**
  * ## Description 
  * 
@@ -32,7 +33,7 @@ export namespace ModuleRemeshUniform {
         pack: pack,
         description: "Persistent Data of RemeshUniform"
     })
-    export class PersistentData extends RemeshConfiguration{
+    export class PersistentData  extends FluxThree.Schemas.Object3DConfiguration{
 
         /**
          * Factor that defines meshing resolution w/ original resolution
@@ -89,25 +90,22 @@ export namespace ModuleRemeshUniform {
     })
     export class Module extends RemeshBase<PersistentData> {
         constructor(params) {
-            super(params, remeshSurface)
+            super(params, "remesh uniform", remeshSurface)
         }
     }
 
-    function remeshSurface(
-        positions: Float32Array, 
-        indexes: Uint16Array,
-        config: PersistentData, 
-        pmpModule: any
-        ): IPmpMeshImplementation {
-
-        let typedPositions = Array.from(positions)
-        let typedIndexes = Array.from(indexes)
-
+    function remeshSurface({ args, taskId, context, workerScope }:{
+        args: WorkerArguments<PersistentData>, 
+        taskId: string,
+        workerScope: any,
+        context: WorkerContext
+    }) {
+        let pmpModule = workerScope["PmpModule"]
+        let typedPositions = Array.from(args.positions)
+        let typedIndexes = Array.from(args.indexes)
         let surface = pmpModule.buildSurface(typedPositions, typedIndexes)
         let mean = surface.meanEdgeLength()
-        surface.uniformRemesh(mean * config.edgeFactor, config.iterationsCount, config.useProjection)
-
-        return surface
+        surface.uniformRemesh(mean * args.config.edgeFactor, args.config.iterationsCount, args.config.useProjection)
+        return { positions: surface.position(), indexes: surface.index()}
     }
-
 }
