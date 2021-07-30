@@ -107,9 +107,10 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#logchannels" class="tsd-kind-icon">log<wbr>Channels</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#logs_" class="tsd-kind-icon">logs$</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#moduleid" class="tsd-kind-icon">module<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#output_" class="tsd-kind-icon">output$</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#outputslots" class="tsd-kind-icon">output<wbr>Slots</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#remeshfunction" class="tsd-kind-icon">remesh<wbr>Function</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#remeshfunctioninworker" class="tsd-kind-icon">remesh<wbr>Function<wbr>InWorker</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-inherited">
@@ -119,15 +120,12 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#addjournal" class="tsd-kind-icon">add<wbr>Journal</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-external"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#addoutput" class="tsd-kind-icon">add<wbr>Output</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#createoutputobject" class="tsd-kind-icon">create<wbr>Output<wbr>Object</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#formatmessage" class="tsd-kind-icon">format<wbr>Message</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#getinputslot" class="tsd-kind-icon">get<wbr>Input<wbr>Slot</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-external"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#getoutputslot" class="tsd-kind-icon">get<wbr>Output<wbr>Slot</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-external"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#getpersistentdata" class="tsd-kind-icon">get<wbr>Persistent<wbr>Data</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#getslot" class="tsd-kind-icon">get<wbr>Slot</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#log" class="tsd-kind-icon">log</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#processmultithreaded" class="tsd-kind-icon">process<wbr>Multi<wbr>Threaded</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#processsinglecpu" class="tsd-kind-icon">process<wbr>SingleCPU</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#remesh" class="tsd-kind-icon">remesh</a></li>
 							</ul>
 						</section>
 					</div>
@@ -146,7 +144,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="lib_remesh_base_module.remeshbase.html">RemeshBase</a>.<a href="lib_remesh_base_module.remeshbase.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/youwol/flux-pmp/blob/e43cb17/src/lib/remesh-uniform.module.ts#L90">src/lib/remesh-uniform.module.ts:90</a></li>
+									<li>Defined in <a href="https://github.com/youwol/flux-pmp/blob/20ec719/src/lib/remesh-uniform.module.ts#L91">src/lib/remesh-uniform.module.ts:91</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -352,13 +350,24 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="name" class="tsd-anchor"></a>
+					<h3>name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="lib_remesh_base_module.remeshbase.html">RemeshBase</a>.<a href="lib_remesh_base_module.remeshbase.html#name">name</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/youwol/flux-pmp/blob/20ec719/src/lib/remesh-base.module.ts#L66">src/lib/remesh-base.module.ts:66</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="output_" class="tsd-anchor"></a>
 					<h3>output$</h3>
 					<div class="tsd-signature tsd-kind-icon">output$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Pipe</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="lib_remesh_base_module.remeshbase.html">RemeshBase</a>.<a href="lib_remesh_base_module.remeshbase.html#output_">output$</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/youwol/flux-pmp/blob/e43cb17/src/lib/remesh-base.module.ts#L94">src/lib/remesh-base.module.ts:94</a></li>
+							<li>Defined in <a href="https://github.com/youwol/flux-pmp/blob/20ec719/src/lib/remesh-base.module.ts#L65">src/lib/remesh-base.module.ts:65</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -382,13 +391,13 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="remeshfunction" class="tsd-anchor"></a>
-					<h3>remesh<wbr>Function</h3>
-					<div class="tsd-signature tsd-kind-icon">remesh<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">TRemeshFunction</span><span class="tsd-signature-symbol">&lt;</span><a href="lib_remesh_uniform_module.moduleremeshuniform.persistentdata.html" class="tsd-signature-type" data-tsd-kind="Class">PersistentData</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="remeshfunctioninworker" class="tsd-anchor"></a>
+					<h3>remesh<wbr>Function<wbr>InWorker</h3>
+					<div class="tsd-signature tsd-kind-icon">remesh<wbr>Function<wbr>InWorker<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">TRemeshFunction</span><span class="tsd-signature-symbol">&lt;</span><a href="lib_remesh_uniform_module.moduleremeshuniform.persistentdata.html" class="tsd-signature-type" data-tsd-kind="Class">PersistentData</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="lib_remesh_base_module.remeshbase.html">RemeshBase</a>.<a href="lib_remesh_base_module.remeshbase.html#remeshfunction">remeshFunction</a></p>
+						<p>Inherited from <a href="lib_remesh_base_module.remeshbase.html">RemeshBase</a>.<a href="lib_remesh_base_module.remeshbase.html#remeshfunctioninworker">remeshFunctionInWorker</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/youwol/flux-pmp/blob/e43cb17/src/lib/remesh-base.module.ts#L96">src/lib/remesh-base.module.ts:96</a></li>
+							<li>Defined in <a href="https://github.com/youwol/flux-pmp/blob/20ec719/src/lib/remesh-base.module.ts#L67">src/lib/remesh-base.module.ts:67</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -616,7 +625,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="lib_remesh_base_module.remeshbase.html">RemeshBase</a>.<a href="lib_remesh_base_module.remeshbase.html#createoutputobject">createOutputObject</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/youwol/flux-pmp/blob/e43cb17/src/lib/remesh-base.module.ts#L245">src/lib/remesh-base.module.ts:245</a></li>
+									<li>Defined in <a href="https://github.com/youwol/flux-pmp/blob/20ec719/src/lib/remesh-base.module.ts#L118">src/lib/remesh-base.module.ts:118</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -629,39 +638,6 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Object3D</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-					<a name="formatmessage" class="tsd-anchor"></a>
-					<h3>format<wbr>Message</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">format<wbr>Message<span class="tsd-signature-symbol">(</span>workerId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, pmpSrcContent<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, chunk<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol">[]</span>, configuration<span class="tsd-signature-symbol">: </span><a href="lib_remesh_uniform_module.moduleremeshuniform.persistentdata.html" class="tsd-signature-type" data-tsd-kind="Class">PersistentData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">ArrayBuffer</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>config<span class="tsd-signature-symbol">: </span><a href="lib_remesh_uniform_module.moduleremeshuniform.persistentdata.html" class="tsd-signature-type" data-tsd-kind="Class">PersistentData</a><span class="tsd-signature-symbol">; </span>inputData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>indexes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ArrayBuffer</span><span class="tsd-signature-symbol">; </span>positions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ArrayBuffer</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>pmpSrcContent<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>remeshSurfaceFct<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>workerId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from <a href="lib_remesh_base_module.remeshbase.html">RemeshBase</a>.<a href="lib_remesh_base_module.remeshbase.html#formatmessage">formatMessage</a></p>
-								<ul>
-									<li>Defined in <a href="https://github.com/youwol/flux-pmp/blob/e43cb17/src/lib/remesh-base.module.ts#L203">src/lib/remesh-base.module.ts:203</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>workerId: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>pmpSrcContent: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>chunk: <span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5>configuration: <a href="lib_remesh_uniform_module.moduleremeshuniform.persistentdata.html" class="tsd-signature-type" data-tsd-kind="Class">PersistentData</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">ArrayBuffer</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>config<span class="tsd-signature-symbol">: </span><a href="lib_remesh_uniform_module.moduleremeshuniform.persistentdata.html" class="tsd-signature-type" data-tsd-kind="Class">PersistentData</a><span class="tsd-signature-symbol">; </span>inputData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>indexes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ArrayBuffer</span><span class="tsd-signature-symbol">; </span>positions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ArrayBuffer</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>pmpSrcContent<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>remeshSurfaceFct<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>workerId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -826,44 +802,14 @@
 					<a name="processmultithreaded" class="tsd-anchor"></a>
 					<h3>process<wbr>Multi<wbr>Threaded</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">process<wbr>Multi<wbr>Threaded<span class="tsd-signature-symbol">(</span>inputData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol">[]</span>, configuration<span class="tsd-signature-symbol">: </span><a href="lib_remesh_uniform_module.moduleremeshuniform.persistentdata.html" class="tsd-signature-type" data-tsd-kind="Class">PersistentData</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">process<wbr>Multi<wbr>Threaded<span class="tsd-signature-symbol">(</span>geometries<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol">[]</span>, configuration<span class="tsd-signature-symbol">: </span><a href="lib_remesh_uniform_module.moduleremeshuniform.persistentdata.html" class="tsd-signature-type" data-tsd-kind="Class">PersistentData</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Context</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="lib_remesh_base_module.remeshbase.html">RemeshBase</a>.<a href="lib_remesh_base_module.remeshbase.html#processmultithreaded">processMultiThreaded</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/youwol/flux-pmp/blob/e43cb17/src/lib/remesh-base.module.ts#L148">src/lib/remesh-base.module.ts:148</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>inputData: <span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5>configuration: <a href="lib_remesh_uniform_module.moduleremeshuniform.persistentdata.html" class="tsd-signature-type" data-tsd-kind="Class">PersistentData</a></h5>
-								</li>
-								<li>
-									<h5>context: <span class="tsd-signature-type">Context</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-					<a name="processsinglecpu" class="tsd-anchor"></a>
-					<h3>process<wbr>SingleCPU</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">process<wbr>SingleCPU<span class="tsd-signature-symbol">(</span>geometries<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol">[]</span>, configuration<span class="tsd-signature-symbol">: </span><a href="lib_remesh_uniform_module.moduleremeshuniform.persistentdata.html" class="tsd-signature-type" data-tsd-kind="Class">PersistentData</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from <a href="lib_remesh_base_module.remeshbase.html">RemeshBase</a>.<a href="lib_remesh_base_module.remeshbase.html#processsinglecpu">processSingleCPU</a></p>
-								<ul>
-									<li>Defined in <a href="https://github.com/youwol/flux-pmp/blob/e43cb17/src/lib/remesh-base.module.ts#L122">src/lib/remesh-base.module.ts:122</a></li>
+									<li>Defined in <a href="https://github.com/youwol/flux-pmp/blob/20ec719/src/lib/remesh-base.module.ts#L83">src/lib/remesh-base.module.ts:83</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -875,37 +821,7 @@
 									<h5>configuration: <a href="lib_remesh_uniform_module.moduleremeshuniform.persistentdata.html" class="tsd-signature-type" data-tsd-kind="Class">PersistentData</a></h5>
 								</li>
 								<li>
-									<h5>context: <span class="tsd-signature-type">any</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-					<a name="remesh" class="tsd-anchor"></a>
-					<h3>remesh</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">remesh<span class="tsd-signature-symbol">(</span>inputSurfaces<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol">[]</span>, configuration<span class="tsd-signature-symbol">: </span><a href="lib_remesh_uniform_module.moduleremeshuniform.persistentdata.html" class="tsd-signature-type" data-tsd-kind="Class">PersistentData</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from <a href="lib_remesh_base_module.remeshbase.html">RemeshBase</a>.<a href="lib_remesh_base_module.remeshbase.html#remesh">remesh</a></p>
-								<ul>
-									<li>Defined in <a href="https://github.com/youwol/flux-pmp/blob/e43cb17/src/lib/remesh-base.module.ts#L113">src/lib/remesh-base.module.ts:113</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>inputSurfaces: <span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5>configuration: <a href="lib_remesh_uniform_module.moduleremeshuniform.persistentdata.html" class="tsd-signature-type" data-tsd-kind="Class">PersistentData</a></h5>
-								</li>
-								<li>
-									<h5>context: <span class="tsd-signature-type">any</span></h5>
+									<h5>context: <span class="tsd-signature-type">Context</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1001,13 +917,16 @@
 								<a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#moduleid" class="tsd-kind-icon">module<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#output_" class="tsd-kind-icon">output$</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 								<a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#outputslots" class="tsd-kind-icon">output<wbr>Slots</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#remeshfunction" class="tsd-kind-icon">remesh<wbr>Function</a>
+								<a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#remeshfunctioninworker" class="tsd-kind-icon">remesh<wbr>Function<wbr>InWorker</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 								<a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#addinput" class="tsd-kind-icon">add<wbr>Input</a>
@@ -1020,9 +939,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#createoutputobject" class="tsd-kind-icon">create<wbr>Output<wbr>Object</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#formatmessage" class="tsd-kind-icon">format<wbr>Message</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 								<a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#getinputslot" class="tsd-kind-icon">get<wbr>Input<wbr>Slot</a>
@@ -1041,12 +957,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#processmultithreaded" class="tsd-kind-icon">process<wbr>Multi<wbr>Threaded</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#processsinglecpu" class="tsd-kind-icon">process<wbr>SingleCPU</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="lib_remesh_uniform_module.moduleremeshuniform.module.html#remesh" class="tsd-kind-icon">remesh</a>
 							</li>
 						</ul>
 					</li>
