@@ -11,7 +11,18 @@ import { WorkerContext } from '@youwol/flux-core/src/lib/worker-pool';
  * ## Description 
  * 
  * Surface mesh simplification based on approximation error and fairness criteria.
- * 
+ * ## Example
+
+The following example illustrates a simple use of the module:
+<iframe 
+    title="Simple example"
+    width="100%"
+    height="500px"
+    src="/ui/flux-runner/?id=e4a7e20f-70d3-4d89-baf2-ef3d5e04dc07"> 
+</iframe>
+
+The underlying workflow can be accessed [here](/ui/flux-builder/?id=e4a7e20f-70d3-4d89-baf2-ef3d5e04dc07).
+ 
  * ## Technical details
  * 
  * More information can be found:
