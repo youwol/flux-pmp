@@ -28,7 +28,9 @@ export class PmpMesh extends Mesh{
     constructor(
         public readonly pmpSurface: IPmpMeshImplementation,
         material: Material){
-            super(toMeshGeometry(pmpSurface), material)
+            // this constructor can be called with empty args by the clone method of three,
+            // it has to be resilient to this
+            super(pmpSurface ? toMeshGeometry(pmpSurface) : undefined, material)
         }
 }
 
